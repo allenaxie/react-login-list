@@ -1,0 +1,31 @@
+.container {
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    @media only screen and (min-width:650px){
+        width: 50%;
+    }
+
+
+    & h1 {
+        flex: 1;
+        text-align: center;
+    }
+}
+
+.logoutBtnContainer {
+
+    & button {
+        box-shadow: 2px 2px 2px #000;
+    }
+}

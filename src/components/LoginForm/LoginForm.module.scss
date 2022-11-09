@@ -1,0 +1,73 @@
+.formContainer {
+    width: 100%;
+
+    & > form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.formItem {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+
+    @media only screen and (min-width:650px){
+        width: 50%;
+    }
+
+    @media only screen and (min-width: 1200px) {
+        width: 30%;
+    }
+
+    & label {
+        margin-bottom: .5rem;
+    }
+}
+
+.inputContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    & > input {
+        width: 100%;
+        padding-left: 1rem;
+    }
+}
+
+.icon {
+    position: absolute;
+}
+
+.loginBtn {
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+
+    @media only screen and (min-width:650px){
+        width: 50%;
+    }
+
+    @media only screen and (min-width: 1200px) {
+        width: 30%;
+    }
+
+    & button {
+        width: 100%;
+        padding: .3rem;
+        background-color: rgb(36, 101, 220);
+        color: #fff;
+        border: 1px solid black;
+        font-weight: bold;
+        box-shadow: 2px 2px 2px #000;
+        cursor: pointer;
+    }
+}
+
+.disabledBtn {
+    pointer-events: none;
+}
