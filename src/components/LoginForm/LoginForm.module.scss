@@ -57,11 +57,12 @@
         border: 1px solid black;
         font-weight: bold;
         cursor: pointer;
-        transition: .3s all ease-in-out;
+        transition: .2s all ease-in-out ;
 
         &:hover {
             transform: translateY(-2px);
-            box-shadow: 2px 2px 4px rgb(168, 168, 168);
+            color: #000;
+            background-color: #fff;
 
         }
     }
