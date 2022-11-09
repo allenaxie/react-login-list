@@ -24,7 +24,4 @@ React Login List is a React web application developed for Rapptr Labs Test. I sp
 - React icons
 - Sass
 
-Link to Deployed App -- <https://pyen.vercel.app/>
 
-## ⏭️ Next Steps
-- Implement another stocks API. Current API limits to 5 requests/min.
