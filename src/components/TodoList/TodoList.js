@@ -46,7 +46,7 @@ const TodoList = () => {
     }
 
     const handleDelete = (deleteIndex) => {
-        let newList = todoItems?.filter((item,index) => index !== deleteIndex);
+        let newList = todoItems?.filter((item, index) => index !== deleteIndex);
         setTodoItems([...newList]);
         localStorage.setItem('todoItems', JSON.stringify([...newList]))
     }
@@ -57,7 +57,7 @@ const TodoList = () => {
 
     const handleEditSave = (e, editItemIndex) => {
         e.preventDefault();
-        
+
         let newList = todoItems.map((item, idx) => {
             if (editItemIndex === idx) {
                 item.todoText = e.target.editTodo.value;
@@ -86,15 +86,17 @@ const TodoList = () => {
             )
 
     const editForm = (item, index) => (
-        <form key={index} id='editTodo' className={classes.newTodoItem} onSubmit={(e) => handleEditSave(e, index)}>
-            <input
-                type='text'
-                name='editTodo'
-                placeholder='Workout'
-                minLength={1}
-                maxLength={25}
-                defaultValue={item?.todoText}
-            />
+        <form key={index} id='editTodo' className={classes.editTodoItem} onSubmit={(e) => handleEditSave(e, index)}>
+            <div className={classes.editInputContainer}>
+                <input
+                    type='text'
+                    name='editTodo'
+                    placeholder='Workout'
+                    minLength={1}
+                    maxLength={25}
+                    defaultValue={item?.todoText}
+                />
+            </div>
             <button className={classes.saveBtn} type='submit' form='editTodo'>Save</button>
         </form>
     )

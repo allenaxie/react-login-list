@@ -7,6 +7,13 @@ const LoginForm = () => {
     let navigate = useNavigate();
 
     const [submittingForm, setSubmittingForm] = useState(false);
+    const [formErrors, setFormErrors] = useState({});
+
+    const validate = (formData) => {
+        setFormErrors({
+            email: 'Please try again with a valid email.'
+        })
+    }
 
     const handleSubmitForm = async (e) => {
         e.preventDefault();
@@ -15,6 +22,8 @@ const LoginForm = () => {
         const formData = new FormData();
         formData.append("email", e.target.email.value);
         formData.append("password", e.target.password.value);
+
+        // validate(formData);
 
         // submit data
         try {
@@ -53,8 +62,12 @@ const LoginForm = () => {
                             placeholder='user@rapptrlabs.com'
                             maxLength={50}
                             required
+                            className={formErrors?.email ? classes.invalidEmail : ''}
                         />
                     </div>
+                    <span className={classes.errorText}>
+                        {formErrors?.email}
+                    </span>
                 </div>
                 <div className={classes.formItem}>
                     <div className={classes.labelContainer}>
