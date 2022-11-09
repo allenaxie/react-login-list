@@ -12,7 +12,7 @@ React Login List is a React web application developed for Rapptr Labs Test. I sp
 
 | | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|
-|<img src="public/loginPage.png" width=400px height=400px overflow="hidden"> | <img  src="public/todoList.png" width=400px height=400px overflow="hidden"> | <img src="public/newTodo.png" width=400px height=400px overflow="hidden"> 
+|<img src="public/loginPage.png" width=350px height=350px overflow="hidden"> | <img  src="public/todoList.png" width=350px height=350px overflow="hidden"> | <img src="public/newTodo.png" width=350px height=350px overflow="hidden"> 
 
 ## 💻 Technologies Used 
 
